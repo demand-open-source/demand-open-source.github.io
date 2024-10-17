@@ -13,8 +13,9 @@
   <link href="assets/img/favicon.ico" rel="icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,432 +27,65 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Day
-  * Updated: Mar 10 2024 with Bootstrap v5.3.3
-  * Template URL: https://bootstrapmade.com/day-multipurpose-html-template-for-free/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style>
+    body {
+      background-color: #191919;
+    }
+
+    .sixtyfour-convergence-font {
+      font-family: "Sixtyfour Convergence", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      font-variation-settings:
+              "BLED" 0,
+              "SCAN" 0,
+              "XELA" 0,
+              "YELA" 0;
+    }
+
+    .center-content {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .logo img {
+      width: 50vw;
+      max-width: 800px;
+      min-width: 200px;
+    }
+
+    .btn {
+      margin-top: 20px;
+    }
+  </style>
 </head>
 
-<body>
+<body class="sixtyfour-convergence-font">
 
-  <!-- ======= Top Bar ======= -->
-  <section id="topbar" class="d-flex align-items-center">
-    <div class="container d-flex justify-content-center justify-content-md-between">
-      <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope-fill"></i><a href="mailto:info@dmnd.work">info@dmnd.work</a>
-      </div>
-      <div class="social-links d-none d-md-block">
-        <a href="https://twitter.com/DEMAND_POOL" class="twitter"><i class="bi bi-twitter"></i></a>
-        <!-- <a href="#" class="telegram"><i class="bi bi-telegram"></i></a> --!>
-        <a href="https://www.linkedin.com/company/demandpool/" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-      </div>
-    </div>
-  </section>
+<div class="center-content">
+  <h1 class="logo">
+    <a href="https://app.dmnd.work/app" style="cursor: default;">
+      <img src="assets/img/logo.png" class="img-fluid" alt="DEMAND Logo">
+    </a>
+  </h1>
+  <a href="https://app.dmnd.work/app" class="fw-bold" style="color: #fa7d7d;margin-top: 2.5vh;font-size: 3vw;font-size: clamp(16px, 3vw, 50px);letter-spacing: 13px;">ENTER</a>
+</div>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center">
-    <div class="container d-flex align-items-center justify-content-between">
+<!-- Vendor JS Files -->
+<script async src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script async src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script async src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script async src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script async src="assets/vendor/php-email-form/validate.js"></script>
 
-      <h1 class="logo"><a href="index.html">
-        <img src="assets/img/logo.png" class="img-fluid" alt="">
-      </a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Get Started</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li><a class="nav-link scrollto" href="https://app.dmnd.work/app">WebApp</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-    <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
-      <h1>Welcome to Demand</h1>
-      <h2>Decentralize Bitcoin through Sv2, offchain payments, and transparent share accounting.</h2>
-      <a href="#about" class="btn-get-started scrollto">Get Started</a>
-    </div>
-  </section><!-- End Hero -->
-
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
-            <h3>DEMAND is the first pool to support template declaration for pooled mining.</h3>
-            <p class="fst-italic">
-              Leveraging the power of StratumV2 DEMAND offer's better latency and less bandwidth usage
-              to miners.
-            </p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> Improved security through encryption and
-                  authentication.</li>
-              <li><i class="bi bi-check-circle"></i> More freedom thanks to template declaration.</li>
-              <li><i class="bi bi-check-circle"></i> Best transperency with open PPLNS.</li>
-            </ul>
-            <p>
-              Miners that still want to use Stratum V1 can do so via our sv1 endpoint or by using
-              our translator proxy which allows sv1 mining with all the advantages of an StratumV2
-              pool.
-
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End About Section -->
-
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
-      <div class="container">
-
-        <div class="section-title">
-          <span>Get Started</span>
-          <h2>Get Started</h2>
-          <p>The pool is in beta but anyone can already try it</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4><a href="#pooled-sv2">Pooled Sv2</a></h4>
-              <p>
-                 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                 Pooled mining through the Sv2 enpoint 
-                 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="150">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4><a href="#solo-sv2">Solo Sv2</a></h4>
-              <p>
-                 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                 Pooled mining through the Sv2 endpoint 
-                 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4><a href="#pooled-sv1">Pooled Sv1</a></h4>
-              <p>
-                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                Pooled mining through the Sv1 endpoint
-                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="450">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4><a href="#solo-sv1">Solo Sv1</a></h4>
-              <p>
-                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                Solo mining through the Sv1 endpoint
-                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="450">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4><a href="">With Job Declarator</a></h4>
-              <p>
-                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                Solo mining through the Sv1 endpoint
-                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="450">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4><a href="">With Translator</a></h4>
-              <p>
-                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                Solo mining through the Sv1 endpoint
-                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
-
-
-    <!-- ======= Pooled Sv2 Section ======= -->
-    <section id="pooled-sv2" class="services">
-      <div class="container">
-
-        <div class="section-title">
-          <span>Pooled Sv2</span>
-          <h2>Pooled Sv2</h2>
-          <p>Pooled mining through the Sv2 enpoint</p>
-        </div>
-          <b>Pooled mining is not enabled, yet.</b> 
-          In order to do pooled mining you have to register an account via our 
-          <a href="https://app.dmnd.work/app">webapp</a> then you must enable two factor authentication and register a 
-          payout method. At that point you will get a token. Then you can use it in 
-          your setup connection message, like this:
-          <pre>
-            <code>
-              SetupConnection {
-                  protocol: Protocol::MiningProtocol,
-                  min_version: 2,
-                  max_version: 2,
-                  flags: 0b0000_0000_0000_0000_0000_0000_0000_0001,
-                  endpoint_host: "mining.dmnd.work",
-                  endpoint_port: 2000,
-                  vendor: "vendor",
-                  hardware_version: "hw_version",
-                  firmware: "firmware_version",
-                  device_id: "[device_id]::pooled::[token]",
-              }
-            </code>
-          </pre>
-          The important part here is <b>device_id: "[device_id]::pooled::[token]"</b> <br/><br/>
-          <b>[device_id]</b> will be used to log the downstream activity.<br/> 
-          <b>pooled</b> intsructs the pool to use pooled mining for that connection.<br/>
-          <b>[token]</b> is a securty check so that we are sure which account must be credited for
-          the share produced.<br/><br/>
-          Sv2 endpoint is: <b>mining.dmnd.work:2000</b>
-        <div class="row">
-        </div>
-      </div>
-    </section><!-- Pooled Sv2 Section -->
-
-    <!-- ======= Solo Sv2 Section ======= -->
-    <section id="solo-sv2" class="services">
-      <div class="container">
-
-        <div class="section-title">
-          <span>Solo Sv2</span>
-          <h2>Solo Sv2</h2>
-          <p>Solo mining through the Sv2 endpoint</p>
-        </div>
-          To do solo mining you don't need to have an account with us because you chose the
-          coinbase output. When you do solo mining you don't have share accounting and you have to
-          find a block in order to be payed. More entities can mine with a solo pool that pay the
-          same address, and then split the reward in the way that they prefer. From our
-          <a href="https://app.dmnd.work/app">webapp</a> you can check the status of the miners that are
-          mining with a specific solo pool, you juts need to put the address that you used in your
-          setup connection message in the text box and click on "check" to see some stats about
-          your workers.
-          <pre>
-            <code>
-              SetupConnection {
-                  protocol: Protocol::MiningProtocol,
-                  min_version: 2,
-                  max_version: 2,
-                  flags: 0b0000_0000_0000_0000_0000_0000_0000_0001,
-                  endpoint_host: "mining.dmnd.work",
-                  endpoint_port: 2000,
-                  vendor: "vendor",
-                  hardware_version: "hw_version",
-                  firmware: "firmware_version",
-                  device_id: "[device_id]::solo::[bitcoin address]",
-              }
-            </code>
-          </pre>
-          The important part here is <b>device_id: "[device_id]::pooled::[bitcoin address]"</b> <br/><br/>
-          <b>[device_id]</b> will be used to log the downstream activity.<br/> 
-          <b>pooled</b> intruct the pool to use pooled mining for that connection.<br/>
-          <b>[bitcoin address]</b> is the address that will be used in the coinbase output, it must
-          be a bitcoin address for bitcoin network (not testnet) serialized as a bech32 or base58
-          string.<br/><br/>
-          Sv2 endpoint is: <b>mining.dmnd.work:2000</b>
-        <div class="row">
-        </div>
-      </div>
-    </section><!-- Solo Sv2 Section -->
-
-    <!-- ======= Pooled Sv1 Section ======= -->
-    <section id="pooled-sv1" class="services">
-      <div class="container">
-
-        <div class="section-title">
-          <span>Pooled Sv1</span>
-          <h2>Pooled Sv1</h2>
-          <p>Pooled mining through the Sv1 enpoint</p>
-        </div>
-          <b>Pooled mining is not yet enabled.</b>
-          In order to do pooled mining you have to register an account via our 
-          <a href="https://app.dmnd.work/app">webapp</a> then you must enabled two factor auth and registerd a 
-          payout method. At that point you will get a token. then you can use it in your auth
-          message, like this:
-          <pre>
-            <code>
-              {
-                  "message": {
-                      "id": 3,
-                      "method": "mining.authorize",
-                      "params": ["username", "[token]"]
-                  },
-                  "id": "mining.authorize"
-              }
-            </code>
-          </pre>
-          The important part here is <b>device_id: ""params": ["[username]", "[token]"]"</b> <br/><br/>
-          <b>[username]</b> will be used to log the downstream activity.<br/> 
-          <b>[token]</b> is a securty check so that we are sure which account must be credited for 
-          the share produced.<br/><br/>
-          Sv1 endpoint is: <b>mining.dmnd.work:1000</b>
-        <div class="row">
-        </div>
-      </div>
-    </section><!-- Pooled Sv1 Section -->
-
-    <!-- ======= Pooled Sv1 Section ======= -->
-    <section id="solo-sv1" class="services">
-      <div class="container">
-
-        <div class="section-title">
-          <span>Solo Sv1</span>
-          <h2>Solo Sv1</h2>
-          <p>Solo mining through the Sv1 enpoint</p>
-        </div>
-          To do solo mining you don't need to have an account with us because you chose the
-          coinbase output. When you do solo mining you don't have share accounting and you have to
-          find a block in order to be payed. More entities can mine with a solo pool that pay the
-          same address, and then split the reward in the way that they prefer. From our
-          <a href="https://app.dmnd.work/app">webapp</a> you can check the status of the miners that are
-          mining with a specific solo pool, you juts need to put the address that you used in your
-          auth message in the text box and click on "check" to see some stats about
-          your workers.
-          <pre>
-            <code>
-              {
-                  "message": {
-                      "id": 3,
-                      "method": "mining.authorize",
-                      "params": ["username", "[bitcoin address]"]
-                  },
-                  "id": "mining.authorize"
-              }
-            </code>
-          </pre>
-          The important part here is <b>device_id: ""params": ["[username]", "[bitcoin address]"]"</b> <br/><br/>
-          <b>[username]</b> will be used to log the downstream activity.<br/> 
-          <b>[bitcoin address]</b> is the address that will be used in the coinbase output, it must
-          be a bitcoin address for bitcoin network (not testnet) serialized as a bech32 or base58
-          string.<br/><br/>
-          Sv1 endpoint is: <b>mining.dmnd.work:1000</b>
-        <div class="row">
-        </div>
-      </div>
-    </section><!-- Pooled Sv1 Section -->
-
-
-
-    <!-- ======= Team Section ======= -->
-    <section id="team" class="team">
-      <div class="container">
-
-        <div class="section-title">
-          <span>Team</span>
-          <h2>Team</h2>
-          <p>DEMAND team</p>
-        </div>
-
-        <div class="row" id="team-row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
-            <div class="member">
-              <img src="assets/img/team/team-1.jpg" alt="">
-              <h4>Alejeandro De La Torre</h4>
-              <span>Chief Executive Officer</span>
-              <p>
-                  Mining pool veteran, former vp of btccom and poolin, taprootactivation coordinator 
-              </p>
-              <div class="social">
-                <a href="https://twitter.com/bitentrepreneur"><i class="bi bi-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/alejandrodelatorre/"><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
-            <div class="member">
-              <img src="assets/img/team/team-2.png" alt="">
-              <h4>Filippo Merli</h4>
-              <span>Chief Technology Officer</span>
-              <p>
-                Creator of SRI the first stratum v2 open source implementation
-              </p>
-              <div class="social">
-                <a href="https://twitter.com/dev_sv2"><i class="bi bi-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/filippo-merli-fi3/"><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-
-        </div>
-
-      </div>
-    </section><!-- End Team Section -->
-
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Day</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/day-multipurpose-html-template-for-free/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+<!-- Template Main JS File -->
+<script async src="assets/js/main.js"></script>
 
 </body>
 
