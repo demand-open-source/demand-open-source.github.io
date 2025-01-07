@@ -1,0 +1,310 @@
+.ibm-plex-mono-thin {
+  font-family: "IBM Plex Mono", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.ibm-plex-mono-extralight {
+  font-family: "IBM Plex Mono", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.ibm-plex-mono-light {
+  font-family: "IBM Plex Mono", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ibm-plex-mono-regular {
+  font-family: "IBM Plex Mono", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ibm-plex-mono-medium {
+  font-family: "IBM Plex Mono", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ibm-plex-mono-semibold {
+  font-family: "IBM Plex Mono", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.ibm-plex-mono-bold {
+  font-family: "IBM Plex Mono", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.jersey-10-regular {
+  font-family: "Jersey 10", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Root font size set to 8px */
+html {
+  font-size: 8px;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+  width: 155rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav {
+  padding: 3rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 155rem;
+  /*height: 11.5rem;*/
+  color: white;
+  font-size: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #42474C;
+}
+
+.nav-items {
+  list-style: none;
+  display: flex;
+  gap: 3rem; /* Space between items */
+  margin: 0;
+  padding: 0;
+  font-size: 3rem;
+}
+
+.nav-items li {
+  font-size: 3rem;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: #767676;
+  transition: color 0.3s;
+}
+
+.nav-items a:hover {
+  color: white;
+}
+
+.main-content {
+  position: relative;
+  height: 500vh;
+}
+
+.line.left {
+  left: calc(50% - 39rem);
+}
+
+.line.middle {
+  left: 50%;
+}
+
+.line.right {
+  left: calc(50% + 39rem);
+}
+
+.line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #42474C;
+  z-index: -1;
+}
+
+h1 {
+  font-size: 100px;
+  font-weight: 500;
+  line-height: 110px;
+  text-align: left;
+  color: white;
+  margin: 0;
+}
+
+.hero-image-container {
+  position: absolute;
+  left: calc(50% - 39rem);
+}
+
+.hero-image {
+  width: 78rem;
+}
+
+.hero-square {
+  position: absolute;
+  width: calc(8rem * 0.875);
+  height: calc(8rem * 0.875);
+  background-color: pink;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(1);
+}
+
+.sq-bottom-top {
+  bottom: calc(16rem * 0.875);
+}
+
+.sq-bottom-bottom {
+  bottom: 0;
+}
+
+.sq-bottom-right {
+  bottom: calc(8rem * 0.875);
+  left: calc(8rem * 0.875);
+}
+
+.sq-bottom-left {
+  bottom: calc(8rem * 0.875);
+  left: calc(-8rem * 0.875);
+}
+
+.sq-top-right {
+  bottom: calc(43rem * 0.875);
+  left: calc(27.5rem * 0.875);
+}
+
+.sq-top-bottom {
+  bottom: calc(43rem * 0.875);
+  left: calc(19.5rem * 0.875);
+}
+
+.sq-top-top {
+  bottom: calc(51rem * 0.875);
+  left: calc(19.5rem * 0.875);
+}
+
+.sq-right-right {
+  right: calc(-16rem * 0.875);
+  bottom: 0;
+}
+
+.sq-right-left {
+  right: calc(-8rem * 0.875);
+}
+
+.sq-right-bottom {
+  bottom: 0;
+  right: 0;
+}
+
+.rec-transparent {
+  bottom: 0;
+  left: calc(50% - 78rem);
+  border: 1px solid #42474C;
+  background-color: transparent;
+  width: calc(39rem - 2px);
+  height: calc(8rem * 0.875 - 2px);
+}
+
+.sq-transparent {
+  bottom: calc(-32rem * 0.875);
+  left: 0;
+  border: 1px solid #42474C;
+  background-color: transparent;
+}
+
+@keyframes bottom-top {
+  0% { background-color: transparent }
+  50% { background-color: transparent }
+  100% { background-color: #DFDDDB }
+}
+
+@keyframes bottom-bottom {
+  0% { background-color: #D1C3B4 }
+  50% { background-color: #D1C3B4 }
+  100% { background-color: #D1C3B4 }
+}
+
+@keyframes bottom-right {
+  0% { background-color: transparent }
+  50% { background-color: #B88867 }
+  100% { background-color: #B88867 }
+}
+
+@keyframes bottom-left {
+  0% { background-color: #B88867 }
+  50% { background-color: transparent; }
+  100% { background-color: transparent; }
+}
+
+@keyframes top-right {
+  0% { background-color: #322A26; }
+  33.33% { background-color: transparent; }
+  66.66% { background-color: #675147; }
+}
+
+@keyframes top-bottom {
+  0% { background-color: #211A17; }
+  33.33% { background-color: #211A17; }
+  66.66% { background-color: #211A17; }
+}
+
+@keyframes top-top {
+  0% { background-color: #472E22; }
+  33.33% { background-color: #472E22; }
+  66.66% { background-color: #472E22; }
+}
+
+@keyframes right-right {
+  0% { background-color: #211A17; }
+  33.33% { background-color: #EF3A2E; }
+  66.66% { background-color: #211A17; }
+}
+
+@keyframes right-left {
+  0% { background-color: #30160B; }
+  33.33% { background-color: #30160B; }
+  66.66% { background-color: #4D3328; }
+}
+
+@keyframes right-bottom {
+  0% { background-color: #252525; }
+  33.33% { background-color: transparent; }
+  66.66% { background-color: #3A3A3A; }
+}
+
+.sq-bottom-top { animation-name: bottom-top; }
+.sq-bottom-bottom { animation-name: bottom-bottom; }
+.sq-bottom-right { animation-name: bottom-right; }
+.sq-bottom-left { animation-name: bottom-left; }
+.sq-top-right { animation-name: top-right; }
+.sq-top-bottom { animation-name: top-bottom; }
+.sq-top-top { animation-name: top-top; }
+.sq-right-right { animation-name: right-right; }
+.sq-right-left { animation-name: right-left; }
+.sq-right-bottom { animation-name: right-bottom; }
+
+.hero-image-text {
+  position: absolute;
+  color: white;
+  font-family: "IBM Plex Mono", serif;
+  font-weight: 500;
+  font-size: 4rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero-bitcoin {
+  width: 4.8rem;
+  height: 4.8rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
