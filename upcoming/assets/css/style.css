@@ -794,14 +794,54 @@ h1 {
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+  margin: 0;
 }
 
 .contact-paragraphs {
   position: relative;
-  top: 65rem;
+  top: 57rem;
   height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+form {
+  width: 70.5rem;
+  padding-top: 8.5rem;
+  padding-bottom: 11.5rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 1.5rem;
+  background: #42474C;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+label {
+  display: block;
+  padding-bottom: 1rem;
+  color: #73797F;
+  font-size: 2rem;
+}
+
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+button {
+  width: 100%;
+  padding: 4rem;
+  background: #7AC943;
+  border: none;
+  color: black;
+  font-weight: bold;
+}
 
 
 /* Util */
