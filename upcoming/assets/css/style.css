@@ -1,4 +1,6 @@
-
+li {
+  list-style: none;
+}
 
 .ibm-plex-mono-thin {
   font-family: "IBM Plex Mono", serif;
@@ -631,8 +633,6 @@ h1 {
 
 .bottom-logo-container {
   height: 74rem;
-  /*temp%%%*/
-  background-color: black;
 }
 
 .bottom-logo {
@@ -645,6 +645,70 @@ h1 {
   padding-bottom: 21rem;
 }
 
+.bottom-nav-container {
+  height: 10rem;
+  background: black;
+}
+
+.bottom-nav {
+  display: flex;
+  height: 10rem;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #42474C;
+  margin: 0;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  width: 155rem;
+}
+
+.bottom-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 2.75rem;
+  padding: 1rem;
+}
+
+.bottom-nav:nth-child(1) {
+  position: absolute;
+  right: calc(50% - 1px);
+  width: 71.334rem;
+}
+
+.bottom-nav:nth-child(2) {
+  position: absolute;
+  left: calc(50% + 39rem);
+  width: 32.584rem;
+}
+
+.post-bottom-container {
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post-bottom-container ul {
+  display: flex;
+  height: 10rem;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin: 0;
+}
+
+.post-bottom-container ul:nth-child(2) {
+  padding-right: 3rem;
+}
+
+
+.post-bottom-container ul li {
+  font-size: 1.60rem;
+  color: white;
+  padding: 1rem;
+  text-decoration: none;
+}
 
 /* Util */
 .color-red {
