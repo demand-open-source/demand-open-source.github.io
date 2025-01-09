@@ -22,18 +22,24 @@
   }
 }
 
-@media screen and (min-width: 2000px) {
+@media screen and (min-width: 2000px) and (min-height: 1500px) {
   html {
     font-size: 10px;
   }
 }
 
-@media screen and (min-width: 3000px) {
+@media screen and (min-width: 3000px) and (min-height: 2000px) {
   html {
     font-size: 12px;
   }
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
 
 li {
   list-style: none;
@@ -105,6 +111,7 @@ body {
   width: 155rem;
   margin-left: auto;
   margin-right: auto;
+  overflow: visible;
 }
 
 nav {
@@ -772,6 +779,10 @@ h1 {
   padding-left: 3rem;
   padding-right: 3rem;
   margin: 0;
+}
+
+.post-bottom-container ul:nth-child(1) {
+  width: 77.625rem;
 }
 
 .post-bottom-container ul:nth-child(2) {
