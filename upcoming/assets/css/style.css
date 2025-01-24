@@ -231,17 +231,17 @@ h1 {
 }
 
 .sq-top-right {
-  bottom: calc(43rem * 0.875);
+  bottom: calc(47rem * 0.875);
   left: calc(27.5rem * 0.875);
 }
 
 .sq-top-bottom {
-  bottom: calc(43rem * 0.875);
+  bottom: calc(47rem * 0.875);
   left: calc(19.5rem * 0.875);
 }
 
 .sq-top-top {
-  bottom: calc(51rem * 0.875);
+  bottom: calc(55rem * 0.875);
   left: calc(19.5rem * 0.875);
 }
 
@@ -358,7 +358,15 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 150%;
+  text-align: center;
+  display: block;
+}
+
+.create-your-own-blocks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-bitcoin {
@@ -639,6 +647,11 @@ h1 {
   top: calc(50% + 2.25rem);
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 102%;
+}
+
+.demand-decentralization-text div {
+  padding-bottom: 1.5rem;
 }
 
 .demand-decentralization-square {
