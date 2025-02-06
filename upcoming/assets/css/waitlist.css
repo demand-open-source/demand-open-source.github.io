@@ -21,6 +21,28 @@
   }
 }
 
+@media screen and (max-width: 720px) {
+  .not-decentralized .pie-chart-and-text {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pie-chart-description {
+    margin-left: 0 !important;
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .not-decentralized {
+    flex-wrap: wrap !important;
+  }
+
+  .subplate {
+    text-align: center;
+  }
+}
+
 @media screen and (max-width: 957px) {
   html {
     font-size: 6px;
@@ -42,13 +64,13 @@
     width: calc(100vw - 16rem) !important;
   }
 
-  .not-decentralized {
-    flex-wrap: wrap !important;
-  }
+  /*.not-decentralized {*/
+  /*  flex-wrap: wrap !important;*/
+  /*}*/
 
-  .not-decentralized .subplate:nth-child(2) {
-    text-align: right;
-  }
+  /*.not-decentralized .subplate:nth-child(2) {*/
+  /*  text-align: right;*/
+  /*}*/
 
   .mining-revenues {
     display: none !important;
@@ -384,7 +406,6 @@ nav {
 .not-decentralized .subplate {
   background-color: #030303;
   width: 100%;
-  height: 100%;
   padding: 3rem;
 }
 
@@ -394,7 +415,7 @@ nav {
 }
 
 .pie-chart {
-  height: 27rem;
+  max-height: 27rem;
   margin-top: 3rem;
 }
 
