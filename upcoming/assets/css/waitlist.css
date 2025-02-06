@@ -12,6 +12,10 @@
   .button {
     width: 50rem !important;
   }
+
+  .b-title {
+    font-size: 5rem !important;
+  }
 }
 
 @media screen and (max-width: 690px) {
