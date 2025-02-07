@@ -11,6 +11,7 @@
 
   .button {
     width: 50rem !important;
+
   }
 
   .b-title {
@@ -366,6 +367,28 @@ nav {
   visibility: hidden;
 }
 
+.first-plate button {
+  background-color: #8AD66E;
+  color: #030303;
+  border: none;
+  font-size: 4.5rem;
+  font-weight: 400;
+  padding: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin: 1rem;
+  display: block;
+  font-family: "Jersey 10", serif;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0.125rem solid #8AD66E;
+}
+
+.first-plate button:hover {
+  background: #030303;
+  color: #8AD66E;
+}
+
 .satoshi {
   margin-top: 3rem;
   position: relative;
@@ -507,6 +530,12 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #8AD66E;
+}
+
+.button:hover {
+  background-color: #030303;
+  color: #8AD66E;
 }
 
 .button-container {
@@ -729,4 +758,83 @@ nav {
 .cursor {
   font-family: monospace;
   animation: blink 1s step-end infinite;
+}
+
+
+
+
+/* modal code */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 30% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* Modal Header */
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+/* Modal Body */
+.modal-body {padding: 2px 16px;}
+
+/* Modal Footer */
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
 }
