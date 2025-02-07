@@ -342,6 +342,7 @@ nav {
   height: 7.5rem;
   width: 8.5rem;
   margin-top: 3rem;
+  position: relative;
 }
 
 .b-title {
@@ -718,7 +719,7 @@ nav {
 
 .b-title::after {
   content: "";
-  animation: typing 12s steps(25, end) forwards;
+  animation: typing 6s steps(25, end) forwards;
 }
 
 @keyframes blink {

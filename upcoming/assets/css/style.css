@@ -38,7 +38,6 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: hidden;
 }
 
 li {
@@ -132,13 +131,15 @@ nav {
 }
 
 .nav-items {
-  width: 78rem;
   justify-content: space-between;
   list-style: none;
   display: flex;
   margin: 0;
   padding: 0;
   font-size: 3rem;
+  min-width: 40rem;
+  width: 50rem;
+  margin-left: 10rem
 }
 
 .nav-items li {
@@ -195,7 +196,7 @@ h1 {
 }
 
 .hero-image {
-  width: 78rem;
+  max-width: 78rem;
 }
 
 .image-height {
@@ -358,7 +359,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 150%;
+  max-width: 150%;
   text-align: center;
   display: block;
 }
@@ -397,6 +398,8 @@ h1 {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  /*%%%*/
+  display: none;
 }
 
 .boxes-container-height {
@@ -483,6 +486,7 @@ h1 {
 }
 
 .demand-decentralization-container {
+  display: none; /*%%%*/
   padding-top: 4.5rem;
   width: 180rem;
   position: absolute;
@@ -493,6 +497,7 @@ h1 {
   mask-image: linear-gradient(to right, black 80%, transparent 100%);
   background: black;
   height: 122.75rem;
+  overflow: hidden;
 }
 
 .demand-decentralization-image {
