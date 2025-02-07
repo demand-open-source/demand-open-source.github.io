@@ -4,18 +4,17 @@
   }
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 533px) {
   .nav-items li:nth-child(2), .nav-items li:nth-child(3), .nav-items li:nth-child(4) {
     display: none !important;
   }
 
-  .button {
-    width: 50rem !important;
-    /*font-weight: 400 !important;*/
-  }
-
   .b-title {
     font-size: 5rem !important;
+  }
+
+  .modal-content {
+    padding: 3rem !important;
   }
 }
 
@@ -283,6 +282,7 @@ nav {
 
 .first-plate {
   text-align: center;
+  padding: 3rem;
 }
 
 .main-content {
@@ -334,7 +334,6 @@ nav {
   max-width: 70rem;
   display: inline-block;
   margin-top: 3rem;
-  margin-bottom: 3rem;
 }
 
 .exclamation-symbol {
@@ -342,7 +341,6 @@ nav {
   display: inline-block;
   height: 7.5rem;
   width: 8.5rem;
-  margin-top: 3rem;
   position: relative;
 }
 
@@ -379,8 +377,9 @@ nav {
   margin: 1rem;
   display: block;
   font-family: "Jersey 10", serif;
-  margin-left: auto;
-  margin-right: auto;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   border: 0.125rem solid #8AD66E;
   cursor: pointer;
 }
@@ -500,6 +499,7 @@ nav {
   position: relative;
   text-align: center;
   padding: 0.01rem;
+  padding: 3rem;
 }
 
 .join-title {
@@ -522,7 +522,7 @@ nav {
 }
 
 .button {
-  width: 80rem;
+  width: 100rem;
   height: 13rem;
   border: 0.125rem solid #8AD66E;
   font-family: "Jersey 10", serif;
@@ -542,7 +542,11 @@ nav {
 }
 
 .button-container {
-  margin: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .footer-plate {
@@ -823,6 +827,7 @@ nav {
   animation-name: animatetop;
   animation-duration: 0.4s;
   position: relative;
+  margin: 1rem;
 }
 
 .close {
@@ -836,7 +841,7 @@ nav {
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: #EF3A2E;
   text-decoration: none;
   cursor: pointer;
 }
