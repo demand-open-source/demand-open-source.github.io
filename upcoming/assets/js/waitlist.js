@@ -1,9 +1,11 @@
 var modal = document.getElementById("myModal");
-var btn = document.getElementById("myBtn");
+var buttons = document.getElementsByClassName("btn-click");
 var span = document.getElementsByClassName("close")[0];
 
-btn.onclick = function() {
-    modal.style.display = "block";
+for (var i = 0; i < buttons.length; i++) {
+    buttons[i].onclick = function() {
+        modal.style.display = "flex";
+    };
 }
 
 span.onclick = function() {

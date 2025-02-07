@@ -67,7 +67,7 @@
     </div>
     <div class="b-title"></div>
     <div>
-      <div class="text-box">Be part of history. <button><strong>Join the first Stratum V2 mining pool</strong></button> and lead the fight for decentralization, fairness, and innovation in Bitcoin mining.</div>
+      <div class="text-box">Be part of history. <button class="btn-click">Join the first Stratum V2 mining pool</button> and lead the fight for decentralization, fairness, and innovation in Bitcoin mining.</div>
     </div>
   </div>
 
@@ -302,7 +302,7 @@
       We are decentralizing Mining and putting Miners back where they belong, <br/>in the driver seat.<br/><br/>Sign up now, join the founding members club.
     </div>
     <div class="inline-block button-container">
-      <button id="myBtn" class="button">+ JOIN US</button>
+      <button class="button btn-click">+ JOIN US</button>
     </div>
   </div>
 
@@ -350,7 +350,49 @@
 
     <div class="modal-content">
       <span class="close">&times;</span>
-      <p>Some text in the Modal..</p>
+
+      <form id="mining-form" onsubmit="handleSubmit(event)">
+        <div class="input-container">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <br>
+
+        <div class="input-container">
+          <label for="alternative-contact">Alternative contact:</label>
+          <input id="alternative-contact" name="alternative-contact" type="text">
+        </div>
+        <br/>
+
+        <div id="companyNameField" class="input-container">
+          <label for="companyName">Company Name:</label>
+          <input type="text" id="companyName" name="companyName" required >
+        </div>
+        <br/>
+
+        <div class="input-container">
+          <label for="hashrate">Hashrate (in PH/s):</label>
+          <input type="number" id="hashrate" name="hashrate" min="0" step="0.1" required >
+        </div>
+        <br>
+
+        <span class="radio-container">
+          <div>Do you want to build your own blocks?</div>
+          <input type="radio" name="build_blocks" value="yes" id="yes" checked>
+          <label for="yes">Yes</label>
+          <input type="radio" name="build_blocks" value="no" id="no">
+          <label for="no">No</label>
+        </span>
+        <br/>
+        <br/>
+
+        <div class="input-container">
+          <label for="note">Got Any Questions or Thoughts?</label>
+          <textarea id="note" name="note" rows="4""></textarea>
+        </div>
+        <br/>
+        <button class="submit-btn" type="submit">Submit</button>
+      </form>
     </div>
 
   </div>
