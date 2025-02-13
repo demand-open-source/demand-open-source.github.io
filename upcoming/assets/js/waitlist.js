@@ -18,7 +18,7 @@ window.onclick = function(event) {
     }
 }
 
-async function handleSubmit(event) {
+window.handleSubmit = async function (event) {
     event.preventDefault(); // Prevents the default form submission
 
     // Collect form data
