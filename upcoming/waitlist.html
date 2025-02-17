@@ -411,7 +411,7 @@
 
           try {
               const response = await fetch(form.action, {
-                  method: form.method,
+                  method: 'POST',
                   body: formData,
               });
 
@@ -422,8 +422,8 @@
                   alert("Error submitting form.");
               }
           } catch (err) {
-              const error = err == "" || " " ? "Unknown error" : err;
-              alert("Submission failed:", error);
+              const error = err === "" || err === " " ? "Unknown error" : err;
+              alert(`Submission failed: ${error}`);
               formContent.style.display = "none";
               successContent.style.display = "block";
           }
