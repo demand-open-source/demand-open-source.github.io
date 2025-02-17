@@ -1,6 +1,6 @@
 var modal = document.getElementById("myModal");
 var buttons = document.getElementsByClassName("btn-click");
-var span = document.getElementsByClassName("close")[0];
+var closeButtons = document.getElementsByClassName("close");
 
 for (var i = 0; i < buttons.length; i++) {
     buttons[i].onclick = function() {
@@ -8,8 +8,10 @@ for (var i = 0; i < buttons.length; i++) {
     };
 }
 
-span.onclick = function() {
-    modal.style.display = "none";
+for (var i = 0; i < closeButtons.length; i++) {
+    closeButtons[i].onclick = function() {
+        modal.style.display = "none";
+    };
 }
 
 window.onclick = function(event) {

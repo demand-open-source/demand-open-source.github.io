@@ -889,3 +889,36 @@ nav {
   background-color: #030303;
   color: #8AD66E;
 }
+
+.success-content {
+  display: none;
+}
+
+.tweet-button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #030303 !important;
+  background-color: #8AD66E;
+  font-size: 3rem;
+  cursor: pointer;
+  text-decoration: none;
+  justify-content: center;
+  fill: black;
+  padding: 3rem;
+  margin-top: 3rem;
+
+}
+.tweet-button:hover {
+  border: 0.125rem #8AD66E solid;
+  background-color: #030303;
+  color: white !important;
+  fill: white;
+
+}
+.tweet-icon {
+  width: 5rem;
+  height: 5rem;
+}
+
+
