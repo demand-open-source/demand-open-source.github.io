@@ -376,6 +376,8 @@ h1 {
   padding-left: 2rem;
   padding-right: 2rem;
   box-sizing: content-box;
+  display: inline-block;
+  vertical-align: sub;
 }
 
 .join-the-revolution-hero-text {
@@ -398,8 +400,6 @@ h1 {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  /*%%%*/
-  display: none;
 }
 
 .boxes-container-height {
@@ -486,7 +486,6 @@ h1 {
 }
 
 .demand-decentralization-container {
-  display: none; /*%%%*/
   padding-top: 4.5rem;
   width: 180rem;
   position: absolute;
