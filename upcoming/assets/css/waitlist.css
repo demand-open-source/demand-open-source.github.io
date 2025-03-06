@@ -8,7 +8,7 @@
   }
 }
 
-@media screen and (max-width: 533px) {
+@media screen and (max-width: 645px) {
   .nav-items li:nth-child(2), .nav-items li:nth-child(3), .nav-items li:nth-child(4) {
     display: none !important;
   }

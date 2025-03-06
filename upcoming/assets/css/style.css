@@ -141,7 +141,7 @@ nav {
   margin: 0;
   padding: 0;
   font-size: 3rem;
-  min-width: 40rem;
+  min-width: 68rem;
   margin-left: 10rem;
   width: 58rem;
   column-gap: 3rem;
@@ -155,13 +155,13 @@ nav {
   }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 750px) {
   .nav-items {
     column-gap: 2rem;
   }
 }
 
-@media screen and (max-width: 610px) {
+@media screen and (max-width: 725px) {
   .nav-items {
     flex-direction: column;
     align-items: end;
@@ -1050,6 +1050,7 @@ h1 {
   position: absolute;
   right: 0;
   width: 38.5rem;
+  margin-left: -0.125rem;
 }
 
 @media screen and (max-width: 1040px) {
@@ -1059,6 +1060,7 @@ h1 {
     width: 40% !important;
     justify-content: space-evenly;
     position: relative !important;
+    margin-left: 0.125rem;
   }
 
   .bottom-nav-container {
@@ -1070,7 +1072,7 @@ h1 {
 
 @media screen and (max-width: 830px) {
   .bottom-nav {
-    width: 39.05rem !important;
+    width: 39.1rem !important;
   }
 }
 
@@ -1145,10 +1147,9 @@ h1 {
 .contact-title {
   width: 155rem;
   text-align: center;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   padding-top: 2rem;
+  display: flex;
+  justify-self: center;
 }
 
 .contact-container p {
@@ -1163,12 +1164,10 @@ h1 {
 }
 
 .contact-paragraphs {
-  position: relative;
-  top: 57rem;
-  height: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 3rem;
 }
 
 form {
