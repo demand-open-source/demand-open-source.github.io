@@ -141,7 +141,7 @@ nav {
   margin: 0;
   padding: 0;
   font-size: 3rem;
-  min-width: 68rem;
+  max-width: 68rem;
   margin-left: 10rem;
   width: 58rem;
   column-gap: 3rem;
@@ -161,7 +161,7 @@ nav {
   }
 }
 
-@media screen and (max-width: 725px) {
+@media screen and (max-width: 610px) {
   .nav-items {
     flex-direction: column;
     align-items: end;
@@ -1053,7 +1053,7 @@ h1 {
   margin-left: -0.125rem;
 }
 
-@media screen and (max-width: 1040px) {
+@media screen and (max-width: 1020px) {
   .bottom-nav {
     flex-direction: column;
     height: 22rem;

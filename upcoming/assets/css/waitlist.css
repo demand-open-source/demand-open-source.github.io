@@ -674,13 +674,25 @@ nav {
   align-content: center;
 }
 
+@media screen and (max-width: 400px) {
+  .footer-nav-items {
+    flex-direction: column;
+    align-items: end;
+    width: 100% !important;
+  }
+
+  .footer-nav {
+    height: 25.25rem !important;
+  }
+}
+
 .footer-nav-items li {
   font-size: 2rem;
   font-weight: 400;
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: center;
   padding-left: 3rem;
 }
 
