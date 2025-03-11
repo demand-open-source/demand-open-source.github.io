@@ -4,20 +4,22 @@ var closeButtons = document.getElementsByClassName("close");
 
 for (var i = 0; i < buttons.length; i++) {
     buttons[i].onclick = function() {
-        console.log("clicked");
         modal.style.display = "flex";
+        document.documentElement.style.overflow = 'hidden';
     };
 }
 
 for (var i = 0; i < closeButtons.length; i++) {
     closeButtons[i].onclick = function() {
         modal.style.display = "none";
+        document.documentElement.style.overflow = '';
     };
 }
 
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
+        document.documentElement.style.overflow = '';
     }
 }
 

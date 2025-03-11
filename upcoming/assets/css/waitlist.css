@@ -49,6 +49,10 @@
   }
 }
 
+.btc-blocks-container {
+  display: flex;
+}
+
 @media screen and (max-width: 720px) {
   .not-decentralized .pie-chart-and-text {
     flex-wrap: wrap;
@@ -67,6 +71,12 @@
   }
 
   .subplate {
+    text-align: center;
+  }
+
+  .btc-blocks-container {
+    display: inline-block;
+    width: 59%;
     text-align: center;
   }
 }
@@ -224,6 +234,10 @@ body {
   margin-left: auto;
   margin-right: auto;
   overflow: visible;
+}
+
+html.modal-open {
+  overflow: hidden !important;
 }
 
 nav {
@@ -517,7 +531,7 @@ nav {
 }
 
 .countdown .this-offer-ends {
-  font-size: 7rem;
+  font-size: 6rem;
   color: white;
 }
 
