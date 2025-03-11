@@ -510,6 +510,23 @@ nav {
   margin-top: 8rem;
 }
 
+.countdown {
+  text-align: center;
+  padding: 3rem;
+  margin-top: 3rem;
+}
+
+.countdown .this-offer-ends {
+  font-size: 7rem;
+  color: white;
+}
+
+#countdown {
+  font-size:15rem;
+  text-align: center;
+  line-height: 1.1;
+}
+
 .mining-revenues {
   height: 20.5rem;
   display: flex;
@@ -517,8 +534,8 @@ nav {
   align-items: center;
   padding: 3rem;
   margin-top: 3rem;
-
 }
+
 
 
 .mining-revenues-text {

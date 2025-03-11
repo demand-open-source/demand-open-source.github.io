@@ -17,6 +17,11 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&family=Jersey+10&display=swap" rel="stylesheet">
 
   <link href="assets/css/waitlist.css" rel="stylesheet">
+  <script src="assets/js/countdown.min.js"></script>
+  <script async defer>
+
+
+  </script>
 </head>
 
 <body class="ibm-plex-mono-regular">
@@ -65,9 +70,9 @@
     </div>
   </div>
 
-  <div class="black-plate mining-revenues">
-    <h1 class="color-red" style="font-size:15rem">890,333</h1>
-    <div class="text-box">This offer ends</div>
+  <div class="black-plate countdown">
+    <div class="this-offer-ends">This offer ends</div>
+    <h1 id="countdown" class="color-red">890,333</h1>
 
   </div>
 
@@ -167,123 +172,6 @@
   </div>
 
 
-<!--  <div class="black-plate mining-revenues">-->
-<!--    <div class="mining-revenues-text">-->
-<!--      MINING POOLS<br/>SELECTING TX-->
-<!--    </div>-->
-<!--    <svg class="arrow" viewBox="0 0 50 20" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-<!--      <rect x="0.125" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="3.89404" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="7.66357" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="11.4326" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="15.2021" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="18.9712" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="22.7402" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="26.5098" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="30.2788" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="30.2788" y="4.34613" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="30.2788" y="0.576904" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="30.2788" y="11.8846" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="30.2788" y="15.6539" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="34.0479" y="13.7692" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="34.0479" y="2.46155" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="34.0479" y="6.23077" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="34.0479" y="10" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="37.8174" y="11.8846" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="37.8174" y="4.34613" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="37.8174" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="41.5864" y="6.23077" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="41.5864" y="10" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="45.356" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--    </svg>-->
-<!--    <div class="mining-revenues-text">-->
-<!--      POSSIBILITY<br/>OF CENSORSHIP-->
-<!--    </div>-->
-<!--    <svg class="arrow" viewBox="0 0 50 20" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-<!--      <rect x="0.125" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="3.89404" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="7.66357" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="11.4326" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="15.2021" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="18.9712" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="22.7402" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="26.5098" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="30.2788" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="30.2788" y="4.34613" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="30.2788" y="0.576904" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="30.2788" y="11.8846" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="30.2788" y="15.6539" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="34.0479" y="13.7692" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="34.0479" y="2.46155" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="34.0479" y="6.23077" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="34.0479" y="10" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="37.8174" y="11.8846" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="37.8174" y="4.34613" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="37.8174" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="41.5864" y="6.23077" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="41.5864" y="10" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="45.356" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--    </svg>-->
-<!--    <div class="mining-revenues-text">-->
-<!--      BITCOIN’S VALUE<br/>PROPOSITION<br/>IS THREATENED-->
-<!--    </div>-->
-<!--    <svg class="arrow" viewBox="0 0 50 20" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-<!--      <rect x="0.125" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="3.89404" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="7.66357" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="11.4326" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="15.2021" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="18.9712" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="22.7402" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="26.5098" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="30.2788" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="30.2788" y="4.34613" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="30.2788" y="0.576904" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="30.2788" y="11.8846" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="30.2788" y="15.6539" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="34.0479" y="13.7692" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="34.0479" y="2.46155" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="34.0479" y="6.23077" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="34.0479" y="10" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="37.8174" y="11.8846" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="37.8174" y="4.34613" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="37.8174" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="41.5864" y="6.23077" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="41.5864" y="10" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="45.356" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--    </svg>-->
-<!--    <div class="mining-revenues-text">-->
-<!--      ITS MARKET VALUE<br/>IS THREATENED-->
-<!--    </div>-->
-<!--    <svg class="arrow" viewBox="0 0 50 20" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-<!--      <rect x="0.125" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="3.89404" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="7.66357" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="11.4326" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="15.2021" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="18.9712" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="22.7402" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="26.5098" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="30.2788" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="30.2788" y="4.34613" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="30.2788" y="0.576904" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="30.2788" y="11.8846" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="30.2788" y="15.6539" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="34.0479" y="13.7692" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="34.0479" y="2.46155" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="34.0479" y="6.23077" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="34.0479" y="10" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="37.8174" y="11.8846" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="37.8174" y="4.34613" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="37.8174" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="41.5864" y="6.23077" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="41.5864" y="10" width="3.76923" height="3.76923" fill="white"/>-->
-<!--      <rect x="45.356" y="8.11536" width="3.76923" height="3.76923" fill="white"/>-->
-<!--    </svg>-->
-<!--    <div class="mining-revenues-text color-red">-->
-<!--      MINING REVENUES ARE THREATENED-->
-<!--    </div>-->
-<!--  </div>-->
 
   <div class="black-plate features">
     <h2>_MORE PROFITS, MORE BITCOIN...</h2>

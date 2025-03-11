@@ -20,3 +20,17 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+
+var timerId =
+    countdown(
+        new Date(2025, 2, 31, 23, 59, 59, 999),
+        function(ts) {
+            var days = ts.days;
+            var hours = String(ts.hours).padStart(2, '0');
+            var minutes = String(ts.minutes).padStart(2, '0');
+            var seconds = String(ts.seconds).padStart(2, '0');
+            var formattedTime = `${days} days<br>${hours}:${minutes}:${seconds}`;
+            document.getElementById('countdown').innerHTML = formattedTime;
+        },
+        countdown.DAYS|countdown.HOURS|countdown.MINUTES|countdown.SECONDS);
