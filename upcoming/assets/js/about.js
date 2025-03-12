@@ -3,7 +3,7 @@ var buttons = document.getElementsByClassName("team-member-click");
 var closeButtons = document.getElementsByClassName("close");
 
 const bios = [
-    "Former co-founder and VP of top bitcoin mining pools btc.com. Led the MASF taproot activation on bitcoin.",
+    "Former Co-founder & VP of top bitcoin mining pools BTC.com & Poolin. Led the Taproot miner activated softfork on bitcoin.",
     "Filippo’s Bitcoin journey began in 2013, leading him from grassroots education efforts in Italy to pioneering advancements in Bitcoin mining infrastructure. As the lead developer of the Stratum Reference Implementation (SRI), he has played a pivotal role in shaping the Stratum V2 protocol, significantly enhancing mining efficiency, security, and decentralization. Now, as CTO of Demand Pool, the first Stratum V2 mining pool with job declaration, he's at the forefront of a historical moment in Bitcoin Mining History, bringing Stratum V2 to all miners, decentralizing the Bitcoin network.",
     "I worked two years for SRI, so this position was very suitable for me because I am already practical with the backend codebase.",
     "After 4 years in the traditional finance industry, Francisco joined our team as a business developer manager. In this role, Francisco is responsible for managing miner's relationships with the pool, developing strategic partnerships with other organizations and promoting awareness about the mining protocol Stratum V2 and its importance for Bitcoin´s decentralization and its censorship resistance. Francisco holds a bachelor’s degree in Economics from Nova School of Business and Economics, and a master’s degree in Finance from Rotterdam School of Management, Erasmus University.",
