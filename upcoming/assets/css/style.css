@@ -1473,6 +1473,24 @@ h4 {
   position: relative;
   margin: 1rem;
   overflow: scroll;
+  max-height: 90vh;
+}
+
+.modal-content-bio {
+  color: white;
+  font-size: 3rem;
+  background-color: #030303;
+  margin: 0 auto;
+  padding: 10rem;
+  max-width: 90vw;
+  border: 0.125rem solid #8AD66E;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0,0.2),0 0.75rem 3.25rem 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  position: relative;
+  margin: 1rem;
+  overflow: scroll;
+  max-height: 90vh;
 }
 
 .close {
