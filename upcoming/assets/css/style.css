@@ -1478,10 +1478,11 @@ h4 {
 
 .modal-content-bio {
   color: white;
-  font-size: 3rem;
+  font-size: 2rem;
   background-color: #030303;
   margin: 0 auto;
   padding: 10rem;
+  width: 88rem;
   max-width: 90vw;
   border: 0.125rem solid #8AD66E;
   box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0,0.2),0 0.75rem 3.25rem 0 rgba(0,0,0,0.19);
