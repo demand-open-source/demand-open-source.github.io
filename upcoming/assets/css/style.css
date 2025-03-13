@@ -45,6 +45,7 @@ li {
 }
 
 a {
+  color: white;
   text-decoration: none;
 }
 
@@ -1017,7 +1018,7 @@ h1 {
 .dec-sq-bottom { animation-name: dec-sq-bottom; }
 
 .bottom-logo-container {
-  max-height: 63vw;
+  max-height: 130vw;
   height: 56rem;
 }
 
@@ -1535,9 +1536,31 @@ h4 {
 }
 
 
+.guru-protocol {
+  color:white;
+  margin-top: 3rem;
+  font-size: 2.5rem;
+  text-align: center;
+  line-height: 1.2;
+}
 
+@media screen and (max-width: 525px) {
+  .guru-protocol {
+    font-size: 2rem;
+  }
+}
 
+@media screen and (max-width: 425px) {
+  .guru-protocol {
+    font-size: 2rem;
+  }
+}
 
+@media screen and (max-width: 337px) {
+  .guru-protocol {
+    font-size: 1.7rem;
+  }
+}
 
 
 
