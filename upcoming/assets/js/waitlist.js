@@ -26,7 +26,7 @@ window.onclick = function(event) {
 
 var timerId =
     countdown(
-        new Date(2025, 2, 31, 23, 59, 59, 999),
+        new Date(2025, 2, 28, 23, 59, 59, 999),
         function(ts) {
             var days = ts.days;
             var hours = String(ts.hours).padStart(2, '0');

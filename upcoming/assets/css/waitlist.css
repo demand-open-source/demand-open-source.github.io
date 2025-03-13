@@ -541,6 +541,22 @@ nav {
   line-height: 1.1;
 }
 
+@media screen and (max-width: 486px) {
+  #countdown { font-size:18.5vw; }
+
+  .countdown .this-offer-ends {
+    font-size:7.5vw;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #countdown { font-size:18vw; }
+
+  .countdown .this-offer-ends {
+    font-size:7.5vw;
+  }
+}
+
 .mining-revenues {
   height: 20.5rem;
   display: flex;
