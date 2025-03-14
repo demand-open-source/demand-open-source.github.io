@@ -402,7 +402,7 @@ h1 {
 
 .sq-transparent {
   bottom: calc(-32rem * 0.875);
-  left: 0;
+  left: 0.125rem;
   border: 0.125rem solid #42474C;
   background-color: transparent;
 }
@@ -685,7 +685,7 @@ h1 {
 
 
 .demand-decentralization-container {
-  padding-top: 4.5rem;
+  margin-top: 10.5rem;
   max-width: 180rem;
   background-color: black;
   background: black;
