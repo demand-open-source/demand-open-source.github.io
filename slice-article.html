@@ -1,0 +1,700 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>SLICE Explainer</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-transparentGray { background-color: undefined; }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1b32ded4-f8cc-809c-9484-d728dd06bcb4" class="page sans"><header><div class="page-header-icon undefined"><img class="icon" src="https://www.notion.so/icons/document_red.svg"/></div><h1 class="page-title">SLICE Explainer</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-created_by"><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesCreatedBy"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 10.4229C6.05176 10.4229 4.54785 11.1133 3.83008 11.9131C2.90039 10.9082 2.33301 9.55469 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 9.55469 13.1064 10.9082 12.1699 11.9131C11.4521 11.1133 9.94824 10.4229 8 10.4229ZM8 9.30176C9.32617 9.30859 10.3516 8.18066 10.3516 6.71094C10.3516 5.33008 9.31934 4.18164 8 4.18164C6.6875 4.18164 5.6416 5.33008 5.64844 6.71094C5.65527 8.18066 6.68066 9.28809 8 9.30176Z"></path></svg></span>Created by</th><td><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocIN7Lp5qkhRAKod-uxfgxp94R51vLDTYkR64VK2xfBwiyT-pA=s100" class="icon user-icon"/>General Kenobi</span></td></tr><tr class="property-row property-row-created_time"><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesCreatedAt"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM4.54102 8.91211H7.99316C8.30078 8.91211 8.54004 8.67285 8.54004 8.37207V3.8877C8.54004 3.58691 8.30078 3.34766 7.99316 3.34766C7.69238 3.34766 7.45312 3.58691 7.45312 3.8877V7.83203H4.54102C4.2334 7.83203 4.00098 8.06445 4.00098 8.37207C4.00098 8.67285 4.2334 8.91211 4.54102 8.91211Z"></path></svg></span>Created time</th><td><time>@March 11, 2025 6:36 PM</time></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>Category</th><td><span class="selected-value select-value-color-pink">Documentation</span><span class="selected-value select-value-color-gray">Explainer</span><span class="selected-value select-value-color-green">SLICE</span></td></tr><tr class="property-row property-row-last_edited_by"><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesCreatedBy"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 10.4229C6.05176 10.4229 4.54785 11.1133 3.83008 11.9131C2.90039 10.9082 2.33301 9.55469 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 9.55469 13.1064 10.9082 12.1699 11.9131C11.4521 11.1133 9.94824 10.4229 8 10.4229ZM8 9.30176C9.32617 9.30859 10.3516 8.18066 10.3516 6.71094C10.3516 5.33008 9.31934 4.18164 8 4.18164C6.6875 4.18164 5.6416 5.33008 5.64844 6.71094C5.65527 8.18066 6.68066 9.28809 8 9.30176Z"></path></svg></span>Last updated by</th><td><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocIN7Lp5qkhRAKod-uxfgxp94R51vLDTYkR64VK2xfBwiyT-pA=s100" class="icon user-icon"/>General Kenobi</span></td></tr></tbody></table></header><div class="page-body"><h1 id="1b32ded4-f8cc-801d-b635-deb4ac7733f2" class="">Understanding SLICE (PPLNS+JD)</h1><h2 id="1b42ded4-f8cc-8079-b6a6-e469024e5333" class="">Introduction</h2><p id="1b32ded4-f8cc-80b4-9750-d78e28842caa" class="">DMND Pool is the first pool to use the Stratum v2 protocol developed over the past five years by a joint force of FOSS Developers in the Bitcoin Space, mainly the Stratum Reference Implementation (SRI) team. Stratum V2’s goal is to decentralize Bitcoin, specifically the mining and pooled industries. The main lever to achieve this is by righting the wrongs that the previous implementation —Stratum V1— made when it shifted block template creation from the miners to the pool operators. But decentralizing pooled mining is a complex tasks, as mining sits in the cross roads between technology and economics. </p><p id="1b42ded4-f8cc-80b9-a4e1-de065d32efe2" class="">This interplay, between technology and economics, has become more poignant over the past few years. We have seen how the pooled mining landscape trended towards centralization by the hands of the Full Pay Per Share (FPPS) payment system. Between FPPS and Stratum V1, the network was constrained into a path of increasing centralization, where a only handful of Pools decided which blocks got into the blockchain. <mark class="highlight-red_background">Thus, even in the event of full Stratum v2 adoption, economic incentives towards mining centralization would still be present. </mark></p><p id="1b42ded4-f8cc-80f1-80dd-ef32ad8e8270" class="">SLICE [1] is a new mining pool payment system designed to tackle this issue. SLICE has been engineered to work alongside Stratum V2’s design, making sure that both centralization vectors (technical and economic) are addressed harmoniously. SLICE ensures that the economic incentives for pools and miners are well aligned towards fairness, transparency, low variance and decentralization. In the following paragraphs we’ll try to summarize and explain how SLICE works in a simple manner.</p><h2 id="1b52ded4-f8cc-8078-9be3-ef6ae2906302" class="">SLICE: Adapting PPLNS to Stratum V2</h2><p id="1b92ded4-f8cc-80a0-925b-db4e39af93b8" class="">When it comes to our requirements as a pool looking to decentralize, PPLNS is one of the best options out there. It provides a clear idea of how the pool’s financial rewards get distributed amongst miners. Furthermore, it’s transparent and very easy to verify if the pool is playing any games. Its also an actual payment system, not an insurance policy like FPPS, and is thus much cheaper for both pool operators and miners.</p><p id="1b92ded4-f8cc-802a-bebc-f11ab725c2bd" class="">But PPLNS isn’t perfect, especially when we take into account that Stratum V2 encourages each miner to exercise their freedom to build their own blocks using their own node. This also includes the freedom to not mine the most financially lucrative blocks. That’s the Achilles Heel of PPLNS, and its a blindspot that will only get worse as transaction fees become a bigger part of the blocks.</p><p id="1b52ded4-f8cc-80ab-8a50-f9b069a05ed3" class="">Therefore, SLICE divides the blocks into two parts, the block subsidy and the fees. The block subsidy is distributed with the classic PPLNS method, based purely on the amount of hashrate you contributed inside the lookback window. On the other hand, the transaction fees are distributed according to both the hashrate contributed, and the financial value tied to that hashrate. The fee portion is what the Job Declarator in the Stratum V2 helps miners decide, that’s why SLICE can also be called PPLNS+JD.</p><h2 id="1ba2ded4-f8cc-809f-87f5-dd3a9ae9b580" class="">Creating fair Slices</h2><p id="1ba2ded4-f8cc-805f-be5b-c7e4944f54d2" class="">So far we have a great set up, one that accounts not only for the work contributed (hashrate) but also for the financial value attached to that hashrate (transaction fees). Nonetheless, we still need to add one last modification to make sure that the system is fair. This has to do with the scoring, or weighting, that each share gets once it’s adjusted for the transactions attached to it, the Job Declarator part of SLICE. Because if all transactions inside the PPLNS look back window are weighted equally in regards to fees, earlier shares will be penalized by no fault of their own. </p><p id="1ba2ded4-f8cc-80ae-a834-f8f4dcffced3" class="">This is fairly straightforward to understand once you take into account that, as time goes on, the potential for how many fees a block can have increases. Therefore, a share submited at 10am on any given day, will have more financial value than a share submitted 5 minutes before, since in those 5 minutes, new transactions have been submitted, and usually at a higher fee rate than the ones before. If we do not account for this, we would just be falling for the same pitfalls as older pool payment methods like SCORE.</p><p id="1ba2ded4-f8cc-8066-b95d-f82f4111da33" class="">That’s where slices come in. Instead of having all shares be part of one huge lookback window, and penalising shares that, for no fault of their own, simply couldn’t get more valuable transactions, we subdivide the lookback window into smaller Slices of time. Inside each Slice, all of the shares submitted will be compared and scored to the highest revenue generating share. Since we assume that in such a small window of time everyone should have the same ability to generate the most amount of fees possible. This benchmark is continuously updated upwards as new transactions with higher fees show up in the mempool, providing a constant incentive to keep generating the best blocks.</p><p id="1ba2ded4-f8cc-8051-b8a3-de32e9ad466d" class="">Now, thanks to slicing the huge PPLNS lookback window into smaller slices, we can level all of the shares provided in a fair way, not only in regards to fees, but also in regards to fees across time. This innovation is what adapts PPLNS to Stratum V2’s full potential, enabling all miners to exercise their freedom to build their own blocks knowing that they’ll get their fair share of the pool’s rewards.</p><h2 id="1ba2ded4-f8cc-801e-94d0-cea8acb7d776" class="">The size of a Slice </h2><p id="1ba2ded4-f8cc-80e3-8750-cd8e507d0ade" class="">It’s important to note that Slices can be as long or as short as the pool wants them to be. There are also certain criteria for when a Slice ends and a new one starts:</p><ol type="1" id="1ba2ded4-f8cc-808c-991e-f1bb735d8491" class="numbered-list" start="1"><li>A new Blocks is found, thus the current slice ends and a new one starts</li></ol><ol type="1" id="1ba2ded4-f8cc-80b9-bc37-fc1814de745a" class="numbered-list" start="2"><li>The maximum fees we can add to a block have increased a certain amount X, thus we start a new Slice and wait till fees increase by X again before we start a new Slice</li></ol><p id="1ba2ded4-f8cc-8001-9027-c66f090ca368" class="">With this set up, the pool can choose how big or how small X is, and thus modify the dynamic length of the Slices. It’s usually recommended that X is fairly small, since this will allow for more Slices to be created, which makes the scoring of all shares across time more fair.</p><p id="1ba2ded4-f8cc-8098-a6a9-ed8a784e659c" class="">Thus, Slices are created one after the other in a dynamic way, in an efficient, programmatic, and fair way. Each Slice is composed of all of the shares submitted by the miners during that time period, and each share has a difficulty that informs the pool of how much work that share contributes. Therefore, each slice ends up having a certain size, which is calculated in the amount of difficulty inside of it.</p><p id="1ba2ded4-f8cc-8084-b38b-f659301866b6" class="">
+</p><figure class="block-color-orange_background callout" style="white-space:pre-wrap;display:flex" id="1ba2ded4-f8cc-806b-b545-f535e9a8b26e"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><p id="1ba2ded4-f8cc-8040-8bfb-dbe88981de4e" class="">Fun Fact: there is no way to actually <em>know</em> the amount of hashrate in anything, be it a machine, a farm, a pool or even the Bitcoin network. The only way we can “know” the hashrate of anything is by inferring it from the shares, or attempts, that it submits and at which difficulty that was. That’s also the reason for why your machine’s hashrate, or a pool’s hashrate, or the network’s hashrate is never stable and fluctuates, because we can only infer the hashrate given the shares the machine submits. </p><p id="1ba2ded4-f8cc-8069-9c99-fc50a6096c91" class="">A simple experiment to check this is to use the Bitcoin network itself. You can go to either Glassnode or Coinmetrics and compare the amount of Daily Blocks with that day’s Network Hashrate. You’ll see that they match perfectly for 2 weeks, until the next difficulty adjustment slightly shifts them. This is because the network only allows 144 valid shares per day, which opens the door to a lot of variance. But as we collect more shares, our calculations get closer to the real hashrate. That’s why pools tend to ask for many shares a minute, in order to smooth out the variance.</p></div></figure><h2 id="1ba2ded4-f8cc-800e-bb92-ee07fc8c581f" class="">Share treatment in SLICE</h2><p id="1ba2ded4-f8cc-8049-b922-fe5448818ddf" class="">This difficulty is decided by the pool, and in DMND Pool’s case we try to target getting 6 shares per minute from each client. We do this by dynamically modifying the Pool Difficulty for submitting shares that each miner has.</p><p id="1ba2ded4-f8cc-80aa-87dd-ee7308ca9340" class="">Once a miner finds a share that is above our set difficulty, they send it to the pool, and the pool adds it to the current Slice. It is important to note that shares are valued at the Pool Difficulty, not the calculated difficulty of that specific share. This is in order to keep distributions fair, since DMND Pool uses a difficulty based lookback window. Specifically, DMND Pool uses the Bitcoin’s network difficulty and multiplies it by 8 to create the look back window. </p><p id="1ba2ded4-f8cc-8016-a465-d38a78200efd" class="">A good example for why this is important is the case in which a miner finds a block. The current difficulty to find a block is somewhere above 110T, and the lookback window for DMND Pool accounts for 8 times the current network difficulty worth of shares submitted by miners. But if a miner found a block, they would necessarily have a share with a difficulty worth at least that much if not more, and they would occupy at least 1/8 of the Lookback window and thus get that share of the rewards. </p><p id="1ba2ded4-f8cc-80b8-adae-e98718f50a7a" class="">This may sound like a good deal for the lucky miner that found the block, but it’s not fair or efficient for all the other miners, and even the lucky miner would complain once the next block found wasn’t his. Therefore, it’s important to remark that all shares, even the lucky share, are accounted at the pool’s set difficulty for that miner, balancing the system and making it fair once again.</p><h2 id="1ba2ded4-f8cc-80b5-aa48-fb09506bf7d1" class="">Payouts in SLICE</h2><p id="1ba2ded4-f8cc-80d1-892e-c9ce07bf2f5f" class="">As previously mentioned, DMND Pool’s lookback window is calculated by multiplying the current Network Difficulty by 8, and then accounting for all of shares submitted that amount to that. But in Slice, shares are grouped and weighted into Slices that normalise them all to account for fees. In the cases were the lookback window cuts a Slice in half, the whole Slice is included with all of the shares inside of it. All of the shares inside the lookback window are then paid according to the previously mentioned method, were Block Subsidy is distributed only according to work submitted, and Transaction Fees according to work and financial value of said work.</p><h2 id="1ba2ded4-f8cc-803f-abb2-e07b0aceeb05" class="">Lifecycle of a Share in SLICE</h2><p id="1ba2ded4-f8cc-8009-bdab-cf5ca21dd4e6" class="">Since SLICE uses a lookback window of 8 times the Network Difficulty, this effectively means that your shares will be paid 8 times regardless of how big or small the pool is. This is because the lookback window is big, and your share will be accounted for various times. It also means that each share will take a bit longer to reach it’s full expected value, a total of 8 small payments.</p><p id="1ba2ded4-f8cc-80b7-8877-dabc7c0e3ad4" class="">When taking all of your shares in aggregate, this means that there’s a ramp up period before you start seeing the full value of your shares being reflected in your payout. On the other hand, this means that there is a ramp down period, where you’ll still be receiving payouts even though you are not mining anymore. This happens because your shares will still be included in the lookback window.</p><p id="1ba2ded4-f8cc-8011-88c3-eb116ca25534" class="">In cases were miners have to shut off machines for any given reason, like participating in </p><p id="1ba2ded4-f8cc-8037-be2b-e99151de7152" class="">
+</p><p id="1ba2ded4-f8cc-80e7-a614-ed4a381e32c6" class="">
+</p><p id="1b92ded4-f8cc-8080-a261-c23cc9066acb" class="">
+</p><p id="1b92ded4-f8cc-80b7-84bc-e51753d49668" class="">we need to account for the differences in fees that each share provides to the pool, so as to provide fair compensation to each miner according to the financial value inside their shares. It is also important to note that the only way for transactions to leave the mempool is by being added to a block. This means that the amount of transaction in the mempool can only increase unless a block is found. Therefore, more transactions in your node’s mempool means you can build blocks with more transaction fees in it. However, this means that a share found later on has a higher chance of providing more financial value by no merit of its own. This creates various issues and attack vectors —like pool hopping— when trying to implement a fair mining pool payment system like PPLNS.</p><p id="1b52ded4-f8cc-8097-b6d4-dda876ef4763" class="">SLICE solves this by subdividing each mining rounds into smaller slices. In each slice all shares are assumed to have the same ability to generate transaction fees. Therefore, we can account for differences in their transaction fees and score shares with lower transaction values. This way, miners that —for any given reason— want to mine blocks with less fees have the freedom to do so without impacting the profitability of other more financially minded miners. (<em>See </em><em><a href="https://www.notion.so/SLICE-Explainer-1b32ded4f8cc809c9484d728dd06bcb4?pvs=21">MMEV</a></em><em> for more info</em>)</p><p id="1b52ded4-f8cc-8091-8340-ea78e65a976b" class="">With all of this, we can get a better idea of why SLICE can also be referred to as PPLNS+JD. That’s because the distribution of the block’s rewards are split in two parts. The Coinbase reward are distributed using a classical PPLNS system, since there’s no variance in their value from one template to the other. Meanwhile, in order to allow all miners to enjoy the benefits of Stratum V2 to the fullest extent, the transaction fees are distributed according not only to the work performed, but also the financial value of that work for each Slice.</p><h2 id="1b52ded4-f8cc-8009-a830-f6961ca3657e" class="">How Shares work in SLICE</h2><p id="1b52ded4-f8cc-8007-9c4a-f4e2ec33e239" class="">Due to SLICE’s commitment to transparency and auditability, the shares in SLICE work a bit different compared to the classical PPLNS system. The pool usually assigns each miner a specific difficulty that is much much lower than the one the Bitcoin network uses. Depending on your hashrate, the pool will try to target between 5 and 30 shares per minute by modifying the difficulty at which you submit shares. It’s important to note that providing 5 shares of difficulty 100k is the same as providing 30 shares of difficulty. For example, at DMND Pool we try to target 6 Shares per minute, or one every 10 seconds. </p><p id="1b62ded4-f8cc-808f-80f6-dfcfa88a1e02" class="">Then, once the pool receives each share, instead of keeping one share with a high difficulty, it turns that share into lots of individual shares with a difficulty of 1. Thus, one share found at a difficulty of 100.000, turns into 100.000 shares of difficulty 1. Once a block is found by the pool, if it is PPLNS, then it looks back </p><p id="1b52ded4-f8cc-80b3-9428-f5c2dad79d9c" class="">As with all PPLNS systems, SLICE’s lookback window works by multiplying the current network hashrate by a certain amount and counting all of the shares inside the</p><p id="1b52ded4-f8cc-803d-8d37-fdc8657866a6" class="">
+</p><p id="1b52ded4-f8cc-80c9-8d86-ce1f85b00e1f" class="">
+</p><h2 id="1b52ded4-f8cc-80d8-9378-e9a40a8ee2aa" class="">What gives SLICE it’s name</h2><p id="1b52ded4-f8cc-80c1-b65b-d2b083cc7f83" class="">Meni Rosenfeld wrote a fantastic article on all the possible variations of pooled mining payment mechanisms back in 2011. In it, he describes how most systems, apart from PPS —nowadays known mostly by FPPS —, don’t immediately assign a value to each share, but instead, they collect the shares submitted by miners and once a block is found, they look back a certain amount of time and then calculate how much everyone is paid. This is usually called the Lookback Window.</p><p id="1b52ded4-f8cc-801d-abd1-edd526c982e4" class="">For example, one of the earliest methods, SCORE, had mining rounds, which was the time between the current block the pool had solved and the previous block the pool had solved. In PPLNS, the N stands for “any random amount of time looking backwards”. Some pools would use time, or network blocks, number of shares or even difficulty to look backwards. If the Lookback Window is very large, then some shares may be inside that window more than once, and thus be paid various times. But what all of these methods are in common is that shares are lined up in order and the lookback window has a share level precision.</p><p id="1b52ded4-f8cc-809f-ae06-c1ea8ef631e9" class="">
+</p><p id="1b52ded4-f8cc-8018-a3e7-d6f3d7999fb0" class="">
+</p><h2 id="1b42ded4-f8cc-8039-bd35-d553607f50bf" class="">How SLICE works</h2><p id="1b42ded4-f8cc-800a-b94e-db8faaed98f6" class="">SLICE can also be described as PPLNS+JD, which stands for Pay Per Last N Shares with Job Declaration and can be seen as a very easy way to understand the mechanism. In SLICE, Block Rewards are divided between the Coinbase Reward, which are the new coins that the network allows the miner to create on that block, and then the transaction fees, which are the incentives that users give miners to add their transactions to the next block. </p><p id="1b52ded4-f8cc-804d-86d5-f8acd98d8dcf" class="">With SLICE, the Coinbase Reward is split amongst miners using a twist to the classical PPLNS method. </p><p id="1b52ded4-f8cc-8094-b6c6-ecfa2cb26f3f" class="">This twist is what gives SLICE it’s name. In PPLNS or other non-FPPS payment systems, shares are counted in big chunks</p><p id="1b52ded4-f8cc-8065-8a6f-fee6ef0ff895" class="">
+</p><p id="1b52ded4-f8cc-809b-bff6-f30de6bd0ea3" class="">usually standard Mining Rounds between each block in which Shares are tallied and the rewards are distributed amongst miners, SLICE uses smaller slices of time inside of which miners’s shares are accounted for.</p><p id="1b52ded4-f8cc-8037-a04c-db364146df97" class="">
+</p><p id="1b52ded4-f8cc-80d0-9cff-fc9fc69fbab2" class="">PPLNS is one of the systems described in Meni Rosenfeld’s 2011 paper on pooled mining reward. It </p><p id="1b52ded4-f8cc-8066-bd60-ce0fb77851b4" class="">
+</p><p id="1b52ded4-f8cc-80e2-ba21-cd3d650600bc" class="">
+</p><p id="1b42ded4-f8cc-80fd-a570-d0dd658c225c" class="">
+</p><p id="1b52ded4-f8cc-80e6-a749-d0f85e805e60" class="">Every Block </p><p id="1b52ded4-f8cc-8074-b270-c5224fb7a334" class="">
+</p><h2 id="1b52ded4-f8cc-80b1-ad73-dab1af7c31c7" class="">Glossary of terms</h2><p id="1b52ded4-f8cc-807e-ae67-e636e1df80c2" class="">Shares</p><p id="1b52ded4-f8cc-80f5-98d9-ce0224377972" class="">Coinbase rewards</p><p id="1b52ded4-f8cc-8073-9cb2-e0f40b1ed746" class="">FPPS</p><p id="1b52ded4-f8cc-8059-807c-dbddbd22764d" class="">PPLNS</p><p id="1b52ded4-f8cc-80ce-97e8-e30027263ade" class="">Score</p><p id="1b52ded4-f8cc-8002-8fea-c168595b7253" class="">SLICE</p><p id="1b52ded4-f8cc-803c-bd3a-da623b833477" class="">Mining Round</p><p id="1b52ded4-f8cc-8080-84c4-ec6033406fa2" class="">MMEV (Maximum Mempool Extractable Value)</p><p id="1b42ded4-f8cc-8004-bc46-de8a7e78f162" class="">
+</p><h2 id="1b42ded4-f8cc-8043-af3f-e18a881bec0d" class="">Notes</h2><p id="1b42ded4-f8cc-805c-9f9a-f2196c6722c0" class="">[1] SLICE is also known as Pay Per Last N Shares (PPLNS) + Job Declaration (JD), all together PPLNS+JD</p><p id="1b42ded4-f8cc-80bc-85c3-e4ed5dca8c0e" class="">
+</p><h2 id="1b42ded4-f8cc-80e1-89b5-d4dbe7627099" class="">Sources and more learning material</h2><p id="1b42ded4-f8cc-80ce-bff3-f4a1531786b7" class="">[2] PPLNS with Job Declaration Whitepaper: <a href="https://www.dmnd.work/pplns-with-job-declaration/pplns-with-job-declaration.pdf">https://www.dmnd.work/pplns-with-job-declaration/pplns-with-job-declaration.pdf</a></p><p id="1b42ded4-f8cc-8087-8943-dc48997b7fda" class="">[3] Delving Bitcoin Discussion on PPLNS+JD Whitepaper: <a href="https://delvingbitcoin.org/t/pplns-with-job-declaration/1099">https://delvingbitcoin.org/t/pplns-with-job-declaration/1099</a></p><p id="1b42ded4-f8cc-80dd-814f-cc3675c2b62b" class="">[4] Analysis of Bitcoin Pooled Mining Reward Systems, <em>M. Rosenfeld</em>,<a href="https://arxiv.org/abs/1112.4980">https://arxiv.org/abs/1112.4980</a></p><p id="1b42ded4-f8cc-8037-a540-c8305c277e3f" class="">[5] Extension on SV2 share accounting <a href="https://github.com/demand-open-source/share-accounting-ext/blob/master/extension.md">https://github.com/demand-open-source/share-accounting-ext/blob/master/extension.md</a></p><p id="1b42ded4-f8cc-80aa-958e-e1aae682efd7" class="">[6] Incentive Compatibility of Bitcoin Mining Pool Reward Functions <a href="https://timroughgarden.org/papers/bitcoin.pdf">https://timroughgarden.org/papers/bitcoin.pdf</a></p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
