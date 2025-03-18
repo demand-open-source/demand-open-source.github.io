@@ -34,6 +34,14 @@ html {
 /*  }*/
 /*}*/
 
+.slice-iframe {
+  width: 100%;
+  height: 800rem;
+  background: black;
+  border: none;
+  margin-bottom: -80rem;
+}
+
 html, body {
   margin: 0;
   padding: 0;
