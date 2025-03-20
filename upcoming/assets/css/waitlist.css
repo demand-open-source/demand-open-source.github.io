@@ -954,6 +954,23 @@ nav {
   flex-direction: column;
 }
 
+.input-container-hashrate {
+  display: flex;
+  flex-direction: row;
+  column-gap: 3rem;
+}
+
+.input-container-hashrate .input-container {
+  width: 100%;
+}
+
+#unit {
+  margin-top: 1rem;
+  font-size: 3rem;
+  font-family: "IBM Plex Mono", serif;
+  height: 4.9rem;
+}
+
 .input-container input, .input-container textarea {
   margin-top: 1rem;
   font-size: 3rem;
