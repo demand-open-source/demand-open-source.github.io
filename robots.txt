@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /startmining.html
+Disallow: /startmining/index.html
