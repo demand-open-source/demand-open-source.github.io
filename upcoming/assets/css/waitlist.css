@@ -536,7 +536,7 @@ nav {
   color: white;
 }
 
-#countdown {
+#countdown, #countdown-2 {
   font-size:15rem;
   text-align: center;
   line-height: 1.1;
