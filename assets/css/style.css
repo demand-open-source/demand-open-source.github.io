@@ -1499,7 +1499,7 @@ h4 {
   animation-duration: 0.4s;
   position: relative;
   margin: 1rem;
-  overflow: scroll;
+  overflow: hidden;
   max-height: 90vh;
 }
 
