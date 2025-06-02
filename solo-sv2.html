@@ -17,15 +17,14 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&family=Jersey+10&display=swap" rel="stylesheet">
 
   <link href="assets/css/proxy.css" rel="stylesheet">
-
-  <style>
-
-  </style>
-
-
+  <script src="assets/js/solo-sv2.js"></script>
+  <script src="assets/js/scrollreveal.min.js"></script>
 </head>
 
 <body class="ibm-plex-mono-regular" style="overflow-x: hidden;">
+  <div class="hero-image-container">
+    <img src="assets/img/proxyt-hero.png" alt="" class="proxy-hero">
+  </div>
   <nav class="navbar">
     <div>
       <a href="index.html">
@@ -39,22 +38,22 @@
       </a>
     </div>
     <ul class="nav-items">
+<!--      <li><a href="solo-sv2.html.html">_SOLO SV2</a></li>-->
       <li><a href="https://blog.dmnd.work/understanding-slice-pplns-jd/">_SLICE</a></li>
       <li><a href="https://blog.dmnd.work/">_BLOG</a></li>
       <li><a href="about.html">_ABOUT</a></li>
     </ul>
   </nav>
 
-  <img src="assets/img/proxyt-hero.png" alt="" class="proxy-hero">
   <div class="main-content">
     <div class="line left"></div>
     <div class="line middle"></div>
     <div class="line right"></div>
-    <h1 class="main-title main-title-first">_The First <span class="color-red">Solo mining Stratum V2</span> Proxy Is Here.</h1>
+    <h1 class="main-title main-title-first"><span class="blinking-underscore">_</span>The First <span class="color-red">Solo mining Stratum V2</span> Proxy Is Here.</h1>
     <h2 class="main-sub-title">Powered by <span class="color-red">DMND</span></h2>
 
     <div class="image-height">
-      <div class="hero-image-container">
+      <div class="hero-square-container">
         <div class="hero-square sq-bottom-top"></div>
         <div class="hero-square sq-bottom-left"></div>
         <div class="hero-square sq-bottom-middle"></div>
@@ -70,33 +69,41 @@
     <div class="mining-infrastructure-upgraded">[Mining Infrastructure Upgraded]</div>
     <h3 class="dmnd-is-launching">DMND is launching the <span class="color-white">first</span> <span class="color-red">solo mining</span> <span class="color-white">Stratum V2 Proxy</span>. A critical step toward a more decentralized and censorship-resistant Bitcoin mining ecosystem.</h3>
 
-    <div class="download-proxy-container">
+    <div class="download-proxy-container-first">
       <div class="download-proxy-boxes-container">
         <div class="download-proxy-box">
           <div class="download-proxy-box-content">
-            <div>
-              <svg class="download-proxy-icon" width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="61.875" height="61.875" fill="white"/>
-                <path d="M12.8906 51.5625H48.9844V46.4062H12.8906V51.5625ZM48.9844 23.2031H38.6719V7.73438H23.2031V23.2031H12.8906L30.9375 41.25L48.9844 23.2031Z" fill="#EF3A2E"/>
-              </svg>
+            <div class="download-proxy-icon line-height-0">
+              <a class="download-proxy-button" href="https://github.com/demand-open-source/demand-cli/releases">
+                <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="61.875" height="61.875" fill="white"/>
+                  <path d="M12.8906 51.5625H48.9844V46.4062H12.8906V51.5625ZM48.9844 23.2031H38.6719V7.73438H23.2031V23.2031H12.8906L30.9375 41.25L48.9844 23.2031Z" fill="#EF3A2E"/>
+                </svg>
+              </a>
             </div>
-            <div class="download-proxy-box-content-item download-proxy-box-title color-red">DOWNLOAD PROXY</div>
+            <a class="download-proxy-button" href="https://github.com/demand-open-source/demand-cli/releases">
+              <div class="download-proxy-box-content-item">DOWNLOAD PROXY</div>
+            </a>
             <div class="download-proxy-box-content-item download-proxy-box-subtitle">
-              Grab the latest release and start running your own proxy.
+              or visit our <a class="foss-link" href="https://github.com/demand-open-source/demand-cli/releases">FOSS Github</a> and Grab the latest Binaries to start running your own sv2 solo mining.
             </div>
           </div>
         </div>
         <div class="download-proxy-box">
           <div class="download-proxy-box-content">
-            <div>
-              <svg class="download-proxy-icon"  width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 0H61.88V61.88H0V0Z" fill="white"/>
-                <path d="M29.375 26.9375V8.25H14.3438C14.0205 8.25 13.7105 8.3784 13.482 8.60696C13.2534 8.83552 13.125 9.14552 13.125 9.46875V52.5312C13.125 52.8545 13.2534 53.1645 13.482 53.393C13.7105 53.6216 14.0205 53.75 14.3438 53.75H47.6562C47.9795 53.75 48.2895 53.6216 48.518 53.393C48.7466 53.1645 48.875 52.8545 48.875 52.5312V27.75H30.1875C29.972 27.75 29.7653 27.6644 29.613 27.512C29.4606 27.3597 29.375 27.153 29.375 26.9375Z" fill="#343434"/>
-                <path d="M32.625 9.23232V24.0919C32.625 24.1997 32.6678 24.303 32.744 24.3792C32.8202 24.4554 32.9235 24.4982 33.0312 24.4982H47.8909C47.931 24.4982 47.9702 24.4863 48.0036 24.4641C48.037 24.4418 48.0631 24.4102 48.0785 24.3731C48.094 24.3361 48.0981 24.2953 48.0903 24.2559C48.0826 24.2165 48.0634 24.1803 48.0351 24.1518L32.9713 9.0881C32.9429 9.0598 32.9067 9.04057 32.8673 9.03284C32.8279 9.0251 32.7871 9.02921 32.75 9.04464C32.713 9.06007 32.6813 9.08613 32.6591 9.11953C32.6368 9.15293 32.625 9.19218 32.625 9.23232Z" fill="#343434"/>
-              </svg>
+            <div class="download-proxy-icon line-height-0">
+              <a class="how-to-button" href="">
+                <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0H61.88V61.88H0V0Z" fill="white"/>
+                  <path d="M29.375 26.9375V8.25H14.3438C14.0205 8.25 13.7105 8.3784 13.482 8.60696C13.2534 8.83552 13.125 9.14552 13.125 9.46875V52.5312C13.125 52.8545 13.2534 53.1645 13.482 53.393C13.7105 53.6216 14.0205 53.75 14.3438 53.75H47.6562C47.9795 53.75 48.2895 53.6216 48.518 53.393C48.7466 53.1645 48.875 52.8545 48.875 52.5312V27.75H30.1875C29.972 27.75 29.7653 27.6644 29.613 27.512C29.4606 27.3597 29.375 27.153 29.375 26.9375Z" fill="#343434"/>
+                  <path d="M32.625 9.23232V24.0919C32.625 24.1997 32.6678 24.303 32.744 24.3792C32.8202 24.4554 32.9235 24.4982 33.0312 24.4982H47.8909C47.931 24.4982 47.9702 24.4863 48.0036 24.4641C48.037 24.4418 48.0631 24.4102 48.0785 24.3731C48.094 24.3361 48.0981 24.2953 48.0903 24.2559C48.0826 24.2165 48.0634 24.1803 48.0351 24.1518L32.9713 9.0881C32.9429 9.0598 32.9067 9.04057 32.8673 9.03284C32.8279 9.0251 32.7871 9.02921 32.75 9.04464C32.713 9.06007 32.6813 9.08613 32.6591 9.11953C32.6368 9.15293 32.625 9.19218 32.625 9.23232Z" fill="#343434"/>
+                </svg>
+              </a>
             </div>
-            <div class="download-proxy-box-content-item how-to">HOW TO USE IT</div>
-            <div class="download-proxy-box-content-item download-proxy-box-subtitle">
+            <a class="how-to-button" href="">
+              <div class="download-proxy-box-content-item">HOW TO USE IT</div>
+            </a>
+              <div class="download-proxy-box-content-item download-proxy-box-subtitle">
               A practical guide to get your proxy up and running, fast.
             </div>
           </div>
@@ -108,6 +115,100 @@
       <div class="why-this-matters-title">[Why this matters]</div>
       <h3 class="why-this-matters-text">The road to Stratum V2 has been long. <span class="color-white">This is how we got here.</span></h3>
     </div>
+
+    <div class="timeline">
+
+      <div class="timeline-central-line"></div>
+      <div class="timeline-item-row">
+        <div class="timeline-item-image-container">
+          <img src="assets/img/timeline-item-1.png" alt="" class="timeline-item-image">
+        </div>
+        <div class="timeline-text-year"><hr class="timeline-hr-left">2012</div>
+        <div class="timeline-item-text timeline-item-text-left">
+          <div class="timeline-text-title"></div>
+          <div class="timeline-text-title">&nbsp</div>
+          <div class="timeline-text-description"></div>
+        </div>
+      </div>
+
+      <div class="timeline-item-row">
+        <div class="timeline-item-text timeline-item-text-right">
+          <div class="timeline-text-title">Stratum V1 launches</div>
+          <div class="timeline-text-title">&nbsp</div>
+          <div class="timeline-text-description">Pooled mining becomes the norm, but at the cost of miner control.</div>
+        </div>
+        <div class="timeline-text-year"><hr class="timeline-hr-right">2018</div>
+        <div class="timeline-item-image-container">
+          <img src="assets/img/timeline-item-2.png" alt="" class="timeline-item-image">
+        </div>
+      </div>
+
+      <div class="timeline-item-row">
+        <div class="timeline-item-image-container">
+          <img src="assets/img/timeline-item-3.png" alt="" class="timeline-item-image">
+        </div>
+        <div class="timeline-text-year"><hr class="timeline-hr-left">2019</div>
+        <div class="timeline-item-text timeline-item-text-left">
+          <div class="timeline-text-title">Betterhash is proposed</div>
+          <div class="timeline-text-title">&nbsp</div>
+          <div class="timeline-text-description">Matt Corallo proposes a protocol to fix the centralization problem.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item-row">
+        <div class="timeline-item-text timeline-item-text-right">
+          <div class="timeline-text-title">Stratum V2 specs published</div>
+          <div class="timeline-text-title">&nbsp</div>
+          <div class="timeline-text-description">Braiins and Matt Corallo release specs for a more secure, flexible mining protocol.</div>
+        </div>
+        <div class="timeline-text-year"><hr class="timeline-hr-right">2021</div>
+        <div class="timeline-item-image-container">
+          <img src="assets/img/timeline-item-4.png" alt="" class="timeline-item-image">
+        </div>
+      </div>
+
+      <div class="timeline-item-row">
+        <div class="timeline-item-image-container">
+          <img src="assets/img/timeline-item-5.png" alt="" class="timeline-item-image">
+        </div>
+        <div class="timeline-text-year"><hr class="timeline-hr-left">2023</div>
+        <div class="timeline-item-text timeline-item-text-left">
+          <div class="timeline-text-title">SRI development begins</div>
+          <div class="timeline-text-title">&nbsp</div>
+          <div class="timeline-text-description">Filippo Merli starts building the reference implementation for SV2.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item-row">
+        <div class="timeline-item-text timeline-item-text-right">
+          <div class="timeline-text-title">DMND launches first SV2 pool</div>
+          <div class="timeline-text-title">&nbsp</div>
+          <div class="timeline-text-description">We go live with the first fully operational Stratum V2 mining pool.</div>
+        </div>
+        <div class="timeline-text-year"><hr class="timeline-hr-right">2025</div>
+        <div class="timeline-item-image-container">
+          <img src="assets/img/timeline-item-6.png" alt="" class="timeline-item-image">
+        </div>
+      </div>
+
+      <div class="timeline-item-row">
+        <div class="timeline-item-image-container invisible">
+          <img src="assets/img/timeline-item-5.png" alt="" class="timeline-item-image">
+        </div>
+        <div class="timeline-text-year invisible"><hr class="timeline-hr-left">2021</div>
+        <div class="timeline-item-text timeline-item-text-left">
+          <div class="timeline-text-title">DMND launches first SV2 proxy</div>
+          <div class="timeline-text-title">&nbsp</div>
+          <div class="timeline-text-description">Full SV2 stack now deployable. Control goes back to the miners.</div>
+        </div>
+      </div>
+
+      <script>
+          ScrollReveal().reveal('.timeline-item-row', { interval: 400 });
+      </script>
+
+    </div>
+
 
     <div class="relative bottom-mining-container">
       <div class="dot"></div>
@@ -145,28 +246,36 @@
             <div class="download-proxy-boxes-container second-proxy-boxes">
               <div class="download-proxy-box">
                 <div class="download-proxy-box-content">
-                  <div>
-                    <svg class="download-proxy-icon" width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect width="61.875" height="61.875" fill="white"/>
-                      <path d="M12.8906 51.5625H48.9844V46.4062H12.8906V51.5625ZM48.9844 23.2031H38.6719V7.73438H23.2031V23.2031H12.8906L30.9375 41.25L48.9844 23.2031Z" fill="#EF3A2E"/>
-                    </svg>
+                  <div class="download-proxy-icon line-height-0">
+                    <a class="download-proxy-button" href="https://github.com/demand-open-source/demand-cli/releases">
+                      <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="61.875" height="61.875" fill="white"/>
+                        <path d="M12.8906 51.5625H48.9844V46.4062H12.8906V51.5625ZM48.9844 23.2031H38.6719V7.73438H23.2031V23.2031H12.8906L30.9375 41.25L48.9844 23.2031Z" fill="#EF3A2E"/>
+                      </svg>
+                    </a>
                   </div>
-                  <div class="download-proxy-box-content-item download-proxy-box-title color-red">DOWNLOAD PROXY</div>
+                  <a class="download-proxy-button" href="https://github.com/demand-open-source/demand-cli/releases">
+                    <div class="download-proxy-box-content-item">DOWNLOAD PROXY</div>
+                  </a>
                   <div class="download-proxy-box-content-item download-proxy-box-subtitle">
-                    Grab the latest release and start running your own proxy.
+                    or visit our <a class="foss-link" href="https://github.com/demand-open-source/demand-cli/releases">FOSS Github</a> and Grab the latest Binaries to start running your own sv2 solo mining.
                   </div>
                 </div>
               </div>
               <div class="download-proxy-box">
                 <div class="download-proxy-box-content">
-                  <div>
-                    <svg class="download-proxy-icon"  width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0 0H61.88V61.88H0V0Z" fill="white"/>
-                      <path d="M29.375 26.9375V8.25H14.3438C14.0205 8.25 13.7105 8.3784 13.482 8.60696C13.2534 8.83552 13.125 9.14552 13.125 9.46875V52.5312C13.125 52.8545 13.2534 53.1645 13.482 53.393C13.7105 53.6216 14.0205 53.75 14.3438 53.75H47.6562C47.9795 53.75 48.2895 53.6216 48.518 53.393C48.7466 53.1645 48.875 52.8545 48.875 52.5312V27.75H30.1875C29.972 27.75 29.7653 27.6644 29.613 27.512C29.4606 27.3597 29.375 27.153 29.375 26.9375Z" fill="#343434"/>
-                      <path d="M32.625 9.23232V24.0919C32.625 24.1997 32.6678 24.303 32.744 24.3792C32.8202 24.4554 32.9235 24.4982 33.0312 24.4982H47.8909C47.931 24.4982 47.9702 24.4863 48.0036 24.4641C48.037 24.4418 48.0631 24.4102 48.0785 24.3731C48.094 24.3361 48.0981 24.2953 48.0903 24.2559C48.0826 24.2165 48.0634 24.1803 48.0351 24.1518L32.9713 9.0881C32.9429 9.0598 32.9067 9.04057 32.8673 9.03284C32.8279 9.0251 32.7871 9.02921 32.75 9.04464C32.713 9.06007 32.6813 9.08613 32.6591 9.11953C32.6368 9.15293 32.625 9.19218 32.625 9.23232Z" fill="#343434"/>
-                    </svg>
+                  <div class="download-proxy-icon line-height-0">
+                    <a class="how-to-button" href="https://github.com/demand-open-source/demand-cli/releases">
+                      <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0H61.88V61.88H0V0Z" fill="white"/>
+                        <path d="M29.375 26.9375V8.25H14.3438C14.0205 8.25 13.7105 8.3784 13.482 8.60696C13.2534 8.83552 13.125 9.14552 13.125 9.46875V52.5312C13.125 52.8545 13.2534 53.1645 13.482 53.393C13.7105 53.6216 14.0205 53.75 14.3438 53.75H47.6562C47.9795 53.75 48.2895 53.6216 48.518 53.393C48.7466 53.1645 48.875 52.8545 48.875 52.5312V27.75H30.1875C29.972 27.75 29.7653 27.6644 29.613 27.512C29.4606 27.3597 29.375 27.153 29.375 26.9375Z" fill="#343434"/>
+                        <path d="M32.625 9.23232V24.0919C32.625 24.1997 32.6678 24.303 32.744 24.3792C32.8202 24.4554 32.9235 24.4982 33.0312 24.4982H47.8909C47.931 24.4982 47.9702 24.4863 48.0036 24.4641C48.037 24.4418 48.0631 24.4102 48.0785 24.3731C48.094 24.3361 48.0981 24.2953 48.0903 24.2559C48.0826 24.2165 48.0634 24.1803 48.0351 24.1518L32.9713 9.0881C32.9429 9.0598 32.9067 9.04057 32.8673 9.03284C32.8279 9.0251 32.7871 9.02921 32.75 9.04464C32.713 9.06007 32.6813 9.08613 32.6591 9.11953C32.6368 9.15293 32.625 9.19218 32.625 9.23232Z" fill="#343434"/>
+                      </svg>
+                    </a>
                   </div>
-                  <div class="download-proxy-box-content-item how-to">HOW TO USE IT</div>
+                  <a class="how-to-button" href="https://github.com/demand-open-source/demand-cli/releases">
+                    <div class="download-proxy-box-content-item">HOW TO USE IT</div>
+                  </a>
                   <div class="download-proxy-box-content-item download-proxy-box-subtitle">
                     A practical guide to get your proxy up and running, fast.
                   </div>
@@ -179,36 +288,6 @@
     </div>
 
     <div class="relative contact-container">
-
-<!--      <h1 class="contact-title">-->
-<!--        _GET IN TOUCH WITH <span class="color-red">DMND</span> POOL-->
-<!--      </h1>-->
-<!--      </h2>LET´S DECENTRALIZE MINING TOGETHER.</h2>-->
-      <div class="contact-paragraphs">
-        <p>Looking to join the SV2 revolution? Do you have more questions?</p>
-        <p>DMND an answer from us at <a href="mailto:info@dmnd.work" style="color: #EF3A2E">info@dmnd.work</a></p>
-        <form style="display: none;">
-          <div>
-            <label for="name">_NAME</label>
-            <input type="text" placeholder="Your Name" id="name">
-          </div>
-
-          <div>
-            <label for="email">_EMAIL</label>
-            <input type="email" placeholder="email@address.com" id="email">
-          </div>
-
-          <div>
-            <label for="message">_MESSAGE</label>
-            <textarea placeholder="Type here..." id="message"></textarea>
-          </div>
-
-          <button type="submit">+ CONNECT</button>
-        </form>
-        <p style="max-width: 78rem; margin-top: 4rem;">DMND Pool is here to empower miners worldwide. Let us know how we can help you mine better.</p>
-      </div>
-    </div>
-
     <div class="bottom-logo-container">
       <svg class="bottom-logo" width="103" height="45" viewBox="0 0 103 45" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M24.8279 5.38651C23.3922 3.28993 21.4881 1.82737 19.1677 1.04224C17.8247 0.585404 16.1329 0.338749 14.1277 0.309219H0V33.8805H14.1277C16.5913 33.8805 18.7717 33.3455 20.6102 32.2911C22.4553 31.2333 23.9904 29.63 25.1784 27.5265C26.8972 24.4641 27.7684 20.6896 27.7684 16.3106C27.7684 14.5823 27.5645 12.741 27.1601 10.8373C26.7472 8.89354 25.9637 7.06099 24.8279 5.38824V5.38651ZM19.7508 15.4768C19.7508 15.8659 19.7508 16.2915 19.7508 16.7674C19.7508 19.0342 19.4323 21.0057 18.8071 22.6264C17.7017 25.4751 15.8111 26.8612 13.0256 26.8612H7.71765V7.32849H13.0256C15.7083 7.32849 17.5063 8.0893 18.3656 9.58834C18.4769 9.78462 18.578 9.96527 18.6723 10.1355C19.2891 11.4938 19.6497 13.283 19.7491 15.4768H19.7508Z" fill="#EF3A2E"/>
@@ -221,6 +300,7 @@
 
     <div class="bottom-nav-container">
       <ul class="bottom-nav">
+<!--        <li><a href="solo-sv2.html">_SOLO SV2</a></li>-->
         <li><a href="https://blog.dmnd.work/understanding-slice-pplns-jd/">_SLICE</a></li>
         <li><a href="https://blog.dmnd.work/">_BLOG</a></li>
         <li><a href="about.html">_ABOUT</a></li>
