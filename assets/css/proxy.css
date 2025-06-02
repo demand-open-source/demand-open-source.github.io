@@ -673,6 +673,32 @@ h3 {
   border-bottom: 0.125rem solid #42474C;
 }
 
+.why-this-matters {
+  background-color: #151515;
+  display: flex;
+  flex-direction: column;
+  margin-right: -3rem;
+  margin-left: -3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.why-this-matters-title {
+  margin-top: 12.5rem;
+  font-size: 2.75rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: white;
+}
+
+.why-this-matters-text {
+  margin-top: 5rem;
+  margin-bottom: 12.5rem;
+  text-transform: uppercase;
+  max-width: 102rem;
+  color: #7E7E7E;
+}
+
 .title-container {
   display: flex;
   flex-direction: column;
@@ -962,15 +988,15 @@ h3 {
 }
 
 .dec-sq-top-top {
-  top: calc(-3rem);
+  top: calc(20rem);
   left: calc(50% + 39rem - 0.3125rem + calc(8rem * 0.875));
 }
 .dec-sq-top-left {
-  top: calc(-3rem + calc(8rem * 0.875));
+  top: calc(20rem + calc(8rem * 0.875));
   left: calc(50% + 39rem - 0.3125rem);
 }
 .dec-sq-top-right {
-  top: calc(-3rem + calc(8rem * 0.875));
+  top: calc(20rem + calc(8rem * 0.875));
   left: calc(50% + 39rem - 0.3125rem + calc(16rem * 0.875));
 }
 
