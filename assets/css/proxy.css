@@ -785,6 +785,8 @@ h3 {
   gap: 1.5rem;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+  justify-content: center;
+  padding-bottom: 4rem;
 }
 
 .second-proxy-boxes {
@@ -1174,7 +1176,7 @@ h3 {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .dot {
